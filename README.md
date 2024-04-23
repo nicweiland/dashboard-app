@@ -66,3 +66,52 @@ The WebSocket server sends real-time data to the client. It is implemented using
 ## Running unit tests
 
 Run `ng test` or `npm run tests` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Challenges
+
+Here are some challenges I've faced during the development of a project like this one, along with solutions or approaches to address them:
+
+### 1. WebSocket Integration
+Integrating WebSockets into an Angular application can be complex due to asynchronous communication and data flow between server and client. Key challenges include:
+
+- *Connection Management*: Ensuring a stable connection and handling disconnections or errors.
+- *Data Format*: Ensuring consistent data formatting between server and client.
+
+*Solution*:
+Implement a dedicated WebSocket service to manage the connection and handle data reception, providing a stable communication layer for other components.
+
+### 2. Real-Time Data Visualization
+Visualizing real-time data can lead to performance issues, especially with frequent updates. Maintaining a smooth user experience can be challenging.
+
+- *Performance*: Frequent updates to the chart or UI can cause lag or stuttering.
+- *Data Consistency*: Ensuring that data displayed in the chart and list remains consistent as new data arrives.
+
+*Solution*:
+Use optimized libraries like Chart.js for data visualization and implement strategies to limit unnecessary re-renders. Consider debouncing or batching data updates to improve performance.
+
+### 3. Pagination and Data Management
+When dealing with large volumes of data, implementing pagination and keeping track of the data can be challenging.
+
+- *Pagination Logic*: Keeping track of the current page, total pages, and items per page while updating them as new data arrives.
+- *Data Synchronization*: Ensuring the data remains synchronized across components.
+
+*Solution*:
+Implement a flexible pagination system with methods to navigate pages and update total pages as the data grows. Use state management techniques to keep data consistent across components.
+
+### 4. Responsive Design
+Creating a responsive user interface that works well on various devices can be challenging, especially with complex layouts.
+
+- *Responsive Behavior*: Ensuring the UI adapts to different screen sizes without breaking.
+- *Flexibility*: Maintaining a flexible design that accommodates future changes or additional features.
+
+*Solution*:
+Use CSS media queries to adjust layout and styling based on screen size. Implement a mobile-first design approach to ensure a seamless experience on smaller devices.
+
+### 5. Integration with Other Components
+Integrating multiple components and services in an Angular project can lead to challenges in communication and data flow.
+
+- *Component Communication*: Ensuring components can communicate effectively, especially when data is updated in real-time.
+- *Service Dependency*: Managing dependencies between components and services.
+
+*Solution*:
+Leverage Angular's dependency injection for service management and use observables for component communication. Keep components decoupled to ensure scalability and ease of maintenance.
