@@ -1,0 +1,11 @@
+<div class="analytics-container">
+  <h3>Analytics Overview</h3>
+  <div class="metrics">
+    <p><strong>Total Items:</strong> {{ totalItems }}</p>
+    <p><strong>Average Value:</strong> {{ averageValue.toFixed(2) }}</p>
+    <p><strong>Latest Value:</strong> {{ latestValue.value }}</p>
+  </div>
+  <div class="chart-container">
+    <canvas id="analytics-chart"></canvas>
+  </div>
+</div>

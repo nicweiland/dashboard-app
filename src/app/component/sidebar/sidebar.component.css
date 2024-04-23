@@ -1,0 +1,40 @@
+.sidebar {
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  height: 100%;
+  padding: 10px;
+}
+
+.nav-link {
+  color: #343a40;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.nav-link i {
+  margin-right: 10px;
+}
+
+.nav-link:hover {
+  background-color: #e2e6ea;
+}
+
+.nav-link.active {
+  background-color: #e2e6ea;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+}

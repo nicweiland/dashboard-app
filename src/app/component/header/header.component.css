@@ -1,0 +1,64 @@
+.navbar {
+  background-color: #f8f9fa;
+  padding: 15px;
+}
+
+.navbar .navbar-nav {
+  flex-direction: row;
+}
+
+.navbar a {
+  color: #343a40;
+  padding: 10px 15px;
+}
+
+.navbar a:hover {
+  color: #0056b3;
+}
+
+.form-inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-control {
+  width: 200px;
+}
+
+.btn {
+  margin-left: 10px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.user-profile img {
+  border: 2px solid #343a40;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #343a40;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .user-profile {
+    display: none;
+  }
+
+  .navbar .navbar-nav {
+    flex-direction: column;
+  }
+
+  .form-inline {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="real-time-data-container">
+  <h2>Real-Time Data</h2>
+  <ul class="real-time-data-list">
+    <li *ngFor="let item of paginatedData" class="data-item">
+      <span class="data-timestamp">
+        <strong>Timestamp:</strong> {{ item.timestamp | date: 'medium' }}
+      </span>
+      <span class="data-value">
+        <strong>Value:</strong> {{ item.value }}
+      </span>
+    </li>
+  </ul>
+  <div class="pagination-controls">
+    <button (click)="prevPage()" [disabled]="currentPage === 0">Previous</button>
+    <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage >= totalPages - 1">Next</button>
+  </div>
+</div>

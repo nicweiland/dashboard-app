@@ -1,0 +1,22 @@
+.main-content {
+  padding: 20px;
+}
+
+.main-content h3 {
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 10px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+  
+  .row {
+    margin-bottom: 10px;
+  }
+}
